@@ -16,3 +16,9 @@ SELECT * FROM myTbl2;
 
 -- 5. 테이블 삭제
 drop TABLE myTbl2;
+
+--원격 접속한 Oracle 버전 확인
+select * from v$version;
+
+--접속한 DataBase 에 조잰하는 모든 테이블 보기
+select * from tab;

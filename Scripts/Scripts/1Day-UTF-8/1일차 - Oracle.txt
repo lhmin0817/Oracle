@@ -1,0 +1,213 @@
+
+Oracle Developer 		Oracle Server  (원격)
+Oracle 관리하는 툴
+GUI Tool			Oracle XE 21c     (TCP 1521 )   
+
+Oracle Edition    :  Oracle 21 
+1. Enterprise Editon   <== CPU, RAM, 모든 기능이 들어있는 버젼, Cluster
+	서버가 오류나더라도 cluster 된 다른 서버에서 서비스 
+	대형 솔루션에 사용됨.  은행망. 
+2. Standard Edtion    <== Cluster (x), 중규모, 
+3. XE       <= 무료 버젼 
+      - 하나의 DB 만 제공됨 ,  
+      - SID : XE 
+
+MY-SQL / Maria DB       <== 무료 SQL ,  <== 중규모 
+MSSQL                        <== 유료 SQL     <== 중규모
+
+=========================================
+DBMS ( DataBase Management System) 
+  - 여러명이 원격에서 동시에 접속 해서 사용.
+	: 계정(ID, Password), 허가 (권한 부여), 
+  - 트랜잭션 처리 : 동시에 여러명이 접속해서 사용하므로, 데이터가 오류 없이 DB에 저장이되되록
+	- 무결성 
+  - CPU, RAM 제한 없이 사용가능 
+  - Network 를 통해서 사용할 수 있도록 지원 
+  - Oracle, IBM DB2, 사이베이스,     <== 대형서버, 중요한 시스템
+  - MS - SQL 
+  - MYSQL, Maria DB 	<==  Linux 환경의 무료버젼 
+  - Postgre SQL
+
+
+EXCEL    <===== DataBase , DBMS 라고는 하지 않는다. 개인용 DB 
+
+DataBase : Data 가 저장되어 있는 폴더,  많은 테이블이 저장되어 있다. 
+	- 많은 테이블(Table) 이 모델링화 되어 저장 되어 있다.
+	- 객체를  관리하는 단위(폴더) 
+	- Table, index, store procedure, triger, function.....   <== Object (객체) 
+   
+   - Table    :  Data 가 저장되어 있는 파일 
+	- 구조화 되어 저장 되어 있다. 
+   - index     : 테이블의 저장된 데이터를 검색을 아주 빠르게 처리 
+   - store procedure  : SQL 의 프로그래밍 기능을 적용한 객체, 자동화 
+   - triger     : 테이블에 이벤트가 들어왔을때 자동으로 처리하는 객체
+   - function : SQL 프로그래밍 적용
+
+
+===========================
+Oracle 최고 관리자 계정 :    <== 실제 운영하는 서비스 : 14자이상, 대소문자를 섞어서 부여 
+
+  - sys   : Oracle 의 모든 권한을 가진 계정 
+  - system : 시스템을 관리할 수 있는 권한을 가진 계정 
+  - pdbadmin : 시스템 관리 할 수 있는 권한. 
+
+  - HR : 실습시 사용할 계정 생성 , 암호 : 1234 , 
+	- connect, resource    <== 권한을 부여
+	      connect :     <== 원격체서 DBMS (Oracle Server) 에 연결, 
+	      resource :    <== Oracle 에서 resource : table, index, store procedure, triger, function
+		- 객체, resource <== 생성, 수정, 삭제 
+   
+Port : 데이터가 네트워크를 사용해서 전송되는 경로 ( 0 ~ 65,536 ) 
+	TCP (신뢰성있는 전송), UDP (비 신뢰성 데이터 전송) 
+   - Well known Port (잘 알려진 포트) 
+	- TCP 21 : FTP
+	- TCP 22 : SSH
+	- TCP 23 : Telnet
+	- TCP 25 : SMTP    : 메일 송신
+	- TCP 53 : DNS Zone Transfer   : DNS DB를 복사할때 
+	- UDP 53 : DNS Name resolution : DNS 이름풀이 : wwww.naver.com ==> IP Address
+	- TCP 80 : WWW ( World Wide Web ) 
+	- TCP 110 : POP3 : Mail 수신 하는 서버
+	- TCP 3389   : RDP  (원격 서버 관리 : GUI로 관리)
+
+==========================================
+Oracle DB  : TCP 1521
+	Oracle Http Listener : 8080    <== 톰켓 (WAS) : 8080    ,    <== 충돌 발생됨 
+MySQL (Maria DB) : TCP 3306 
+MSSQL : TCP 1433 
+
+netstat -na | more    <== 자신의 시스템에서 열려있는 포트 확인 
+	1521 포트가 오픈 되어 있는지 확인 .
+
+=============================================
+Oracle 관리 
+  - sqlplus 	: TUI 
+  - developer 	: GUI
+
+
+
+
+
+
+
+
+
+
+
+
+- 1. 계정 생성 
+
+    -- 12버젼 부터 계정 생성 변경됨 : 계정 생성시 C## 을 붙여야함. 
+
+create user C##HR identified by 1234
+
+default tablespace USERS
+
+temporary tablespace TEMP; 
+
+
+
+--2. 계정에 권한 부여하기 
+
+grant resource, connect to C##HR; 
+
+
+
+--3.  테이블스페이스 사용 권한 부여
+
+alter user C##HR quota unlimited on USERS;
+
+
+
+--4. 계정 제거하기 
+
+drop user C##HR; 
+
+
+
+
+
+--5. c##을 붙이기 번거로울경우 붙이지 않아도 계정을 생성하는 방법
+
+    --이렇게 생성된 계정을 삭제할때 오라클 스크립트가 true 상태여야지 삭제가 가능
+
+
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+
+
+
+
+
+-- 1. 계정 생성 
+
+    -- 12버젼 부터 계정 생성 변경됨 : 계정 생성시 C## 을 붙여야함. 
+
+create user C##HR identified by 1234
+
+default tablespace USERS
+
+temporary tablespace TEMP; 
+
+
+
+--2. 계정에 권한 부여하기 
+
+grant resource, connect to C##HR; 
+
+
+
+--3.  테이블스페이스 사용 권한 부여
+
+alter user C##HR quota unlimited on USERS;
+
+
+
+--4. 계정 제거하기 
+
+drop user C##HR; 
+
+
+
+
+
+--5. c##을 붙이기 번거로울경우 붙이지 않아도 계정을 생성하는 방법
+
+    --이렇게 생성된 계정을 삭제할때 오라클 스크립트가 true 상태여야지 삭제가 가능
+
+
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

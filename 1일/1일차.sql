@@ -31,3 +31,5 @@ alter user C##HR quota unlimited on USERS;
 drop user C##HR1;
 
 show user;
+
+select * from tab;
