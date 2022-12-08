@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="HR - 계정으로 접속" id="58C31776-4A68-6AB9-1111-76CD3FB17B2C" mainViewID="15739813-2C96-6A03-41A3-6C93C9178E78">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

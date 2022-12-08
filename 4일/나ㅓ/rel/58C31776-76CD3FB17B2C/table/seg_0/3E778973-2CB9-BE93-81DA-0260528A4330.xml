@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3E778973-2CB9-BE93-81DA-0260528A4330" schemaObject="A69CF50A-4DB2-75B7-BDCE-CFDDDA99133D" name="EMP4">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>134FCEF2-B268-D374-11D9-37CBDC247889</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ENO" id="458BC865-0F5E-FC47-ED6A-2C2F3F702B7F">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>FF71973B-528B-5551-A8B0-B413C1A4C3DC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENAME" id="2579CF28-0266-548E-A1A8-5B22E2A9B230">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>8B2064D5-1FF0-D330-37BB-246AA3149F12</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALARY" id="7DCA380A-B3D1-C3DA-E0C0-90025AA05C61">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>7CB9F115-4CFA-266E-E851-1AA7878FBC44</importedID>
+<constraintName>EMP4_SALARY_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="salary &gt;0"/>
+<implementationDef dbType="Oracle Database 12cR2" definition="salary &gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DNO" id="E0120F0F-D753-9E02-D66C-A3EC31378E78">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>930512F5-C04B-F477-2A1E-A32007D18BB4</importedID>
+<constraintName>EMP4_DNO_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<listOfValues>
+<valueDef value="10" description=""/>
+<valueDef value="20" description=""/>
+<valueDef value="30" description=""/>
+<valueDef value="40" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10FA0BF3-8293-978F-88B6-5824ADCA215D" name="EMP4_ENO_PK">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>C8E83402-6682-5FDC-DA4A-603594ACE519</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="458BC865-0F5E-FC47-ED6A-2C2F3F702B7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="259BBE49-650A-A0E3-5E98-0BA42559EDA0" schemaObject="A69CF50A-4DB2-75B7-BDCE-CFDDDA99133D" name="EMP4_ENO_PK">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<importedID>F2047D55-5C1F-BA7C-DBED-663E8CFB6027</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="458BC865-0F5E-FC47-ED6A-2C2F3F702B7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

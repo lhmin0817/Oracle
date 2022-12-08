@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMP4" directorySegmentName="seg_0" id="3E778973-2CB9-BE93-81DA-0260528A4330">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<schemaObject>A69CF50A-4DB2-75B7-BDCE-CFDDDA99133D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>FC615BCC-214E-8FE3-3BE8-BE0C8A6F45D7</segment>
+<tableSpace>C168747B-B1B4-BEF4-FC11-E12D35074643</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ENAME" id="2579CF28-0266-548E-A1A8-5B22E2A9B230">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENO" id="458BC865-0F5E-FC47-ED6A-2C2F3F702B7F">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALARY" id="7DCA380A-B3D1-C3DA-E0C0-90025AA05C61">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DNO" id="E0120F0F-D753-9E02-D66C-A3EC31378E78">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP4_ENO_PK" id="259BBE49-650A-A0E3-5E98-0BA42559EDA0">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<schemaObject>A69CF50A-4DB2-75B7-BDCE-CFDDDA99133D</schemaObject>
+<segment>2324D62A-2DC1-DE19-EE47-6FDD25840CC6</segment>
+<tableSpace>C168747B-B1B4-BEF4-FC11-E12D35074643</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EMP4_ENO_PK" id="10FA0BF3-8293-978F-88B6-5824ADCA215D">
+<createdBy>hi</createdBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<ownerDesignName>나ㅓ</ownerDesignName>
+<segment>2324D62A-2DC1-DE19-EE47-6FDD25840CC6</segment>
+<tableSpace>C168747B-B1B4-BEF4-FC11-E12D35074643</tableSpace>
+<existingIndex>259BBE49-650A-A0E3-5E98-0BA42559EDA0</existingIndex>
+<indexSegment>2324D62A-2DC1-DE19-EE47-6FDD25840CC6</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

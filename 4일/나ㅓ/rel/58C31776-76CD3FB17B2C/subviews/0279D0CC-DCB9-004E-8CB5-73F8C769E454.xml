@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelationalSubView" name="HR - 계정으로 접속 - SubView_1" id="0279D0CC-DCB9-004E-8CB5-73F8C769E454">
+<createdBy>hi</createdBy>
+<modifiedBy>hi</modifiedBy>
+<createdTime>2022-12-08 06:39:02 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="3E778973-2CB9-BE93-81DA-0260528A4330" otype="Table" vid="1A4C9349-9A70-2E29-7CE0-C70EDBFF10CB">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="20" y="20" width="207" height="129"/>
+</OView>
+</objectViews>
+</Diagram>
