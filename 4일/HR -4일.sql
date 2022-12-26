@@ -89,7 +89,10 @@ CREATE TABLE member01(
     weight NUMBER(5, 2) not null
     );
 
---제약 조건
+--제약 조건 : 데이터의 무결성을 확보하기 위해서 테이블의 컬럼에 부여
+            -- 무결설 : 오류없는 데니터, 원하는 데이터
+    --not null :
+    --Foreign key : 
     --primary key : 테이블에서 하나만 존재
         --적용된 컬럼은 중복된 값을 넣을 수 없다.
         --데이터를 수정할 때 삭제 시 조건을 사용하는 컬럼
@@ -102,7 +105,14 @@ CREATE TABLE member01(
         
     --check : 값을 넣을 때 체크해서 값을 넣는다.
     --not null : 컬럼에 null을 넣을 수 없다.
-    
+show user
+select * from user_constraints;         -- 현재 접속한 계정에서 생성된 객체의 모든 제약 조건을 확인
+
+--원하는 테이블의 제약 조건 확인
+select 8 from user_constraints
+where table_name = 'EMPLOYEE';
+
+
 desc member01;
 
 insert into member01(id, pass, addr, phone, age, weight)
