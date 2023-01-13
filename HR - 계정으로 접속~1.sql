@@ -45,3 +45,13 @@ select * from freeboard
 where id =14;
 
 commit;
+
+insert into freeboard (id, name, password, email, subject, content, inputdate,masterid, readcount, replaynum, step)
+values(4,'asdasd','asdasd','asdasd','asdasd','asdaasd','23-24-12 5:24 오후',4,0 ,0 ,0);
+
+
+insert into freeboard (id, name, password, email, subject, content, inputdate,masterid, readcount, replaynum, step) values(5,'sdadsa','asd','asd','asd','asd','23-29-12 5:29 오후',5,0 ,0 ,0);
+
+
+select * from freeboard
+order by id desc;
